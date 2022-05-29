@@ -3,11 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>Ohmyfood</title>
-    <link rel="stylesheet" type="text/css" href="CSS/desktop.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/Mobile.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,16 +45,18 @@
       </nav>
     </header>
     <main>
-      <section>
-        <di>
+      <section class="section_form id_section_form">
+        <div>
           <h1>Réservez le menu qui vous convient</h1>
           <p>
             Découvrez des restaurants d'exception, sélectionnés par nos soins.
           </p>
           <a>
-            <span>Explorez nos restaurants</span>
+            <button type="button" class="button">
+              Explorez nos restaurants
+            </button>
           </a>
-        </di>
+        </div>
       </section>
       <section>
         <div>
@@ -74,7 +82,7 @@
           </div>
         </div>
       </section>
-      <section>
+      <section class="section_form">
         <h1>Restaurants</h1>
         <div>
           <figure class="restaurant_card">
@@ -83,10 +91,13 @@
               src="./images/restaurants/La-palette-du-gout.jpg"
               alt="La-palette-du-gout"
             />
-            <figcaption>
-              <h2 href="Lapalettedugout.html">La palette du goût</h2>
-              <a>Nouveau</a>
-              <span>Ménilmontant</span>
+            <figcaption class="figcaption_form">
+              <div>
+                <h2 class="h2_font_size" href="Lapalettedugout.html">
+                  La palette du goût
+                </h2>
+                <span class="span_form">Ménilmontant</span>
+              </div>
               <div><i class="fa-solid fa-heart"></i></div>
             </figcaption>
           </figure>
@@ -98,10 +109,13 @@
               src="./images/restaurants/La-note-enchantee.jpg"
               alt="La-note-enchantee"
             />
-            <figcaption>
-              <h2 href="Lanoteenchantee.html">La note enchantée</h2>
-              <a>Nouveau</a>
-              <span>Charonne</span>
+            <figcaption class="figcaption_form">
+              <div>
+                <h2 class="h2_font_size" href="Lanoteenchantee.html">
+                  La note enchantée
+                </h2>
+                <span class="span_form">Charonne</span>
+              </div>
               <div><i class="fa-solid fa-heart"></i></div>
             </figcaption>
           </figure>
@@ -113,9 +127,13 @@
               src="./images/restaurants/A-la-francaise.jpg"
               alt="A-la-francaise"
             />
-            <figcaption>
-              <h2 href="Alafrancaise.html">A la française</h2>
-              <span>Cité Rouge</span>
+            <figcaption class="figcaption_form">
+              <div>
+                <h2 class="h2_font_size" href="Alafrancaise.html">
+                  A la française
+                </h2>
+                <span class="span_form">Cité Rouge</span>
+              </div>
               <div><i class="fa-solid fa-heart"></i></div>
             </figcaption>
           </figure>
@@ -127,9 +145,13 @@
               src="./images/restaurants/Le-delice-des-sens.jpg"
               alt="Le-delice-des-sens"
             />
-            <figcaption>
-              <h2 href="Ledelicedessens.html">Le délice des sens</h2>
-              <span>Folie-Méricourt</span>
+            <figcaption class="figcaption_form">
+              <div>
+                <h2 class="h2_font_size" href="Ledelicedessens.html">
+                  Le délice des sens
+                </h2>
+                <span class="span_form">Folie-Méricourt</span>
+              </div>
               <div><i class="fa-solid fa-heart"></i></div>
             </figcaption>
           </figure>
@@ -137,7 +159,7 @@
       </section>
     </main>
     <footer class="footer_form">
-      <div>
+      <div class="color_logo_footer_form">
         <img src="./images/logo/ohmyfood.png" class="logo" alt="Ohmyfood" />
       </div>
       <div class="footer_itemform">
