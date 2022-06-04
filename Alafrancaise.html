@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="CSS/desktop.css" />
+    <link rel="stylesheet" href="CSS/Mobile.css" />
     <title>A la Française</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,17 +24,24 @@
   </head>
   <body>
     <header>
-      <div>
-        <div><i class="fa-solid fa-arrow-left-long"></i></div>
-        <img src="./images/logo/ohmyfood.png" class="logo" alt="Ohmyfood" />
+      <div class="nav_form">
+        <div>
+          <i class="fa-solid fa-arrow-left-long" href="Accueil.html"></i>
+        </div>
+        <img
+          src="./images/logo/ohmyfood.png"
+          class="logo logo_style"
+          alt="Ohmyfood"
+        />
       </div>
     </header>
     <main>
       <section>
         <div>
           <img
-            src="/./images/restaurants/A-la-française.jpg"
+            src="./images/restaurants/A-la-francaise.jpg"
             alt="A-la-francaise"
+            class="img_card"
           />
         </div>
       </section>
@@ -113,26 +120,30 @@
       <section>
         <div>
           <form>
-            <button name="button" type="submit">Commander</button>
+            <button type="button" class="button">Commander</button>
           </form>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer_form">
       <div>
-        <img src="./images/logo/ohmyfood.png" class="logo" alt="Ohmyfood" />
+        <img
+          src="./images/logo/ohmyfood.png"
+          class="logo logo_footer"
+          alt="Ohmyfood"
+        />
       </div>
-      <div>
+      <div class="footer_itemform">
         <i class="fa-solid fa-utensils"></i>
-        <h2>Proposer un restaurant</h2>
+        <h2 class="h2_form">Proposer un restaurant</h2>
       </div>
-      <div>
+      <div class="footer_itemform">
         <i class="fa-solid fa-handshake-angle"></i>
-        <h2>Devenir partenaire</h2>
+        <h2 class="h2_form">Devenir partenaire</h2>
       </div>
       <div>
-        <p>Mentions légales</p>
-        <p>Contact</p>
+        <p class="h2_form">Mentions légales</p>
+        <p class="h2_form">Contact</p>
       </div>
     </footer>
   </body>
