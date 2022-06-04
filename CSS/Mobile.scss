@@ -19,11 +19,18 @@ body {
   }
 
   .button {
-    background-color: #ff79da;
+    background: linear-gradient(to top left, #9356dc, 40%, #ff79da);
     border-radius: 30px;
     border: none;
     box-shadow: 0 5px 5px 5px lightgrey;
     color: white;
+    width: 120%;
+    height: 40px;
+    margin-top: 5%;
+
+    &_regular_progression {
+      background: linear-gradient (to top left, #9356dc, #ff79da);
+    }
   }
   .footer_form {
     display: flex;
@@ -49,7 +56,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 30px;
-    margin: 2%;
+    margin: 2% 2% 2% 0;
   }
   .location_form {
     display: flex;
@@ -68,6 +75,7 @@ body {
     font-weight: bold;
     margin: 4%;
   }
+  /*Section Information Entreprise*/
   .section_form {
     display: flex;
     flex-direction: column;
@@ -79,7 +87,20 @@ body {
     flex-direction: column;
     align-items: center;
     padding: left 5% right 5%;
+    height: 250px;
   }
+  .text_form {
+    margin: 3% 15% 3% 20%;
+    text-align: center;
+  }
+  /*Section Fonctionnement*/
+  .block_choice {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60px;
+  }
+  /*Section Rastrant card*/
   .restaurant_card {
     display: flex;
     flex-direction: column;
