@@ -154,11 +154,71 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    width: 100%;
-    height: 60px;
+    width: 90%;
+    height: 80px;
+    margin: 5% 0 5% 5%;
+    background-color: #f2f2f2;
+    -webkit-box-shadow: 0 5px 5px 5px lightgray;
+            box-shadow: 0 5px 5px 5px lightgray;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
   }
 
-  /*Section Rastrant card*/
+  .block_choice:hover {
+    background-color: #efe2fa;
+  }
+
+  .container_number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: -15px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .icon_style {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: grey;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .icon_style:hover {
+    color: #9356dc;
+  }
+
+  .container_form {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: #9356dc;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+  }
+
+  .div_p_form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  /*Section Restaurant card*/
   .restaurant_card {
     display: -webkit-box;
     display: -ms-flexbox;
