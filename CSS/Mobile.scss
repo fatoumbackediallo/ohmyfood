@@ -18,7 +18,6 @@ body {
   .third-color {
     color: #99e2d0;
   }
-
   .button {
     background: linear-gradient(to top left, #9356dc, 40%, #ff79da);
     border-radius: 30px;
@@ -39,6 +38,8 @@ body {
     width: auto;
     background-color: #303030;
     color: #ffffff;
+    height: 200px;
+    padding: 4%;
   }
   .logo_footer {
     width: 25%;
@@ -49,10 +50,15 @@ body {
     flex-direction: row;
     align-items: center;
   }
+  .h2_itemform {
+    padding-left: 2%;
+    font-size: 14px;
+    margin-left: 1%;
+  }
   .h2_form {
     font-size: 14px;
     font-weight: lighter;
-    margin: 0;
+    margin: 2% 2% 2% 0;
   }
   /*Page Accueil*/
   /*Nav*/
@@ -207,6 +213,7 @@ body {
   #block_page {
     width: auto;
     margin: 0;
+    height: auto;
   }
   .nav_form {
     display: flex;
@@ -218,11 +225,88 @@ body {
     width: 50%;
     height: 30px;
   }
-  .img_card {
+  .main_form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+  }
+  .img_card_menu {
     object-fit: cover;
     position: relative;
-    border-radius: 0;
     width: 100%;
-    height: 200px;
+    height: 250px;
+  }
+  .id_section_form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 23px;
+    font-family: shrikhand;
+  }
+  .menu_section {
+    height: 300px;
+  }
+  .h1_form {
+    margin: 0;
+  }
+  .block_menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 5px 5px 5px lightgray;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+  }
+  .h2_style {
+    font-family: roboto;
+    font-weight: lighter;
+    font-size: 23px;
+    border-bottom: 5px solid #99e2d0;
+    width: 13%;
+    margin: 0;
+  }
+  .fa-heart_style {
+    display: flex;
+    color: none;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-items: center;
+  }
+  .fa-heart_style:hover {
+    color: #9356dc;
+    cursor: pointer;
+  }
+  .h3_style {
+    justify-content: flex-start;
+    font-size: 20px;
+    margin: 0;
+  }
+  .Pmenu_form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .button_command {
+    background: linear-gradient(to top left, #9356dc, 50%, #ff79da);
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 5px 5px 5px lightgrey;
+    color: white;
+    width: 150%;
+    height: 40px;
+    font-size: 15px;
+    // margin-top: 5%;
+  }
+  .button_form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
   }
 }
