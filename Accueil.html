@@ -31,9 +31,13 @@
   <body>
     <header>
       <nav>
-        <div>
-          <div class="logo_style">
-            <img src="./images/logo/ohmyfood.png" class="logo" alt="Ohmyfood" />
+        <div class="container_nav">
+          <div>
+            <img
+              src="./images/logo/ohmyfood.png"
+              class="logo logo_form"
+              alt="Ohmyfood"
+            />
           </div>
           <div class="location_form">
             <i class="fa-solid fa-location-dot location_dot_form"></i>
@@ -62,16 +66,16 @@
           </a>
         </div>
       </section>
-      <section>
+      <section class="section3_form">
         <div>
-          <h1>Fonctionnement</h1>
+          <h1 class="h1style_section3">Fonctionnement</h1>
           <div class="block_choice">
             <div id="container" class="container_number">
               <div class="container_form">1</div>
             </div>
             <div class="div_p_form">
               <i class="fa-solid fa-mobile-screen-button icon_style"></i>
-              <p>Choississez un restaurant</p>
+              <p class="p_style_section3">Choississez un restaurant</p>
             </div>
           </div>
           <div class="block_choice">
@@ -80,7 +84,7 @@
             </div>
             <div class="div_p_form">
               <i class="fa-solid fa-list icon_style"></i>
-              <p>Composez votre menu</p>
+              <p class="p_style_section3">Composez votre menu</p>
             </div>
           </div>
           <div class="block_choice">
@@ -89,16 +93,16 @@
             </div>
             <div class="div_p_form">
               <i class="fa-solid fa-store icon_style"></i>
-              <p>Dégustez au restaurant</p>
+              <p class="p_style_section3">Dégustez au restaurant</p>
             </div>
           </div>
         </div>
       </section>
-      <section class="section_form">
+      <section class="section_card_restaurant">
         <h1>Restaurants</h1>
         <div>
           <figure class="restaurant_card">
-            <div>
+            <div class="div_imag_card">
               <img
                 class="img_card"
                 src="./images/restaurants/La-palette-du-gout.jpg"
@@ -108,8 +112,8 @@
             </div>
             <figcaption class="figcaption_form">
               <div>
-                <h2 class="h2_font_size" href="Lapalettedugout.html">
-                  La palette du goût
+                <h2 class="h2_font_size">
+                  <a href="./Lapalettedugout.html">La palette du goût</a>
                 </h2>
                 <span class="span_form">Ménilmontant</span>
               </div>
@@ -117,7 +121,7 @@
             </figcaption>
           </figure>
         </div>
-        <div>
+        <div class="div_imag_card">
           <figure class="restaurant_card">
             <div>
               <img
@@ -129,8 +133,8 @@
             </div>
             <figcaption class="figcaption_form">
               <div>
-                <h2 class="h2_font_size" href="Lanoteenchantee.html">
-                  La note enchantée
+                <h2 class="h2_font_size">
+                  <a href="./Lanoteenchantee.html">La note enchantée</a>
                 </h2>
                 <span class="span_form">Charonne</span>
               </div>
@@ -147,8 +151,8 @@
             />
             <figcaption class="figcaption_form">
               <div>
-                <h2 class="h2_font_size" href="Alafrancaise.html">
-                  A la française
+                <h2 class="h2_font_size">
+                  <a href="./Alafrancaise.html">A la française</a>
                 </h2>
                 <span class="span_form">Cité Rouge</span>
               </div>
@@ -165,8 +169,8 @@
             />
             <figcaption class="figcaption_form">
               <div>
-                <h2 class="h2_font_size" href="Ledelicedessens.html">
-                  Le délice des sens
+                <h2 class="h2_font_size">
+                  <a href="./Ledelicedessens.html">Le délice des sens</a>
                 </h2>
                 <span class="span_form">Folie-Méricourt</span>
               </div>
@@ -178,23 +182,19 @@
     </main>
     <footer class="footer_form">
       <div>
-        <img
-          src="./images/logo/ohmyfood.png"
-          class="logo logo_footer"
-          alt="Ohmyfood"
-        />
+        <h1 class="logo_footer">Ohmyfood</h1>
       </div>
       <div class="footer_itemform">
         <i class="fa-solid fa-utensils"></i>
-        <h2 class="h2_form">Proposer un restaurant</h2>
+        <h2 class="h2_itemform1">Proposer un restaurant</h2>
       </div>
       <div class="footer_itemform">
         <i class="fa-solid fa-handshake-angle"></i>
-        <h2 class="h2_form">Devenir partenaire</h2>
+        <h2 class="h2_itemform2">Devenir partenaire</h2>
       </div>
       <div>
         <p class="h2_form">Mentions légales</p>
-        <p class="h2_form">Contact</p>
+        <p class="h2_form"><a href="mailto:contact@ohmyfoo.fr">Contact</a></p>
       </div>
     </footer>
   </body>
