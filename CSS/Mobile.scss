@@ -16,19 +16,43 @@ body {
 .third-color {
   color: #99e2d0;
 }
+$clr-btn: #ff79da;
+$clr-btn2: #9356dc;
+$border-rad: 30px;
+$box-shadow: 0 5px 5px 0 lightgray;
 .button {
-  background: linear-gradient(to top left, #9356dc, 50%, #ff79da);
-  border-radius: 30px;
+  background-color: $clr-btn;
+  border-radius: $border-rad;
   border: none;
-  box-shadow: 0 5px 5px 5px lightgrey;
   color: white;
   font-size: 15px;
   width: 120%;
   height: 40px;
   margin-top: 5%;
-
-  &_regular_progression {
-    background: linear-gradient (to top left, #9356dc, #ff79da);
+  position: relative;
+  z-index: 1;
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      top,
+      lighten($clr-btn, 5) 0%,
+      darken($clr-btn2, 3) 100%
+    );
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;
+    border-radius: $border-rad;
+    box-shadow: $box-shadow;
   }
 }
 .footer_form {
@@ -252,10 +276,6 @@ body {
 .fa-heart_style:hover {
   color: #9356dc;
   cursor: pointer;
-
-  &_regular_progression {
-    background: linear-gradient (to bottom, #9356dc, #ff79da);
-  }
 }
 /*Page Menu Restaurant*/
 #block_page {
@@ -341,7 +361,7 @@ body {
   align-items: center;
 }
 .button_command {
-  background: linear-gradient(to top left, #9356dc, 50%, #ff79da);
+  background-color: #ff79da;
   border-radius: 30px;
   border: none;
   box-shadow: 0 5px 5px 5px lightgrey;
@@ -349,7 +369,6 @@ body {
   width: 40%;
   height: 40px;
   font-size: 15px;
-  // margin-top: 5%;
 }
 .button_form {
   display: flex;

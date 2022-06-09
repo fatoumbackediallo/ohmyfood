@@ -22,20 +22,36 @@ body {
 }
 
 .button {
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(50%), to(#ff79da));
-  background: linear-gradient(to top left, #9356dc, 50%, #ff79da);
+  background-color: #ff79da;
   border-radius: 30px;
   border: none;
-  -webkit-box-shadow: 0 5px 5px 5px lightgrey;
-          box-shadow: 0 5px 5px 5px lightgrey;
   color: white;
   font-size: 15px;
   width: 120%;
   height: 40px;
   margin-top: 5%;
+  position: relative;
+  z-index: 1;
 }
-.button_regular_progression {
-  background: linear-gradient to top left, #9356dc, #ff79da;
+.button:hover::after {
+  opacity: 1;
+}
+.button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff93e1), to(#8b49d9));
+  background: linear-gradient(top, #ff93e1 0%, #8b49d9 100%);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 250ms;
+  transition: opacity 250ms;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 5px 5px 0 lightgray;
+          box-shadow: 0 5px 5px 0 lightgray;
 }
 
 .footer_form {
@@ -399,9 +415,6 @@ body {
   color: #9356dc;
   cursor: pointer;
 }
-.fa-heart_style:hover_regular_progression {
-  background: linear-gradient to bottom, #9356dc, #ff79da;
-}
 
 /*Page Menu Restaurant*/
 #block_page {
@@ -546,8 +559,7 @@ body {
 }
 
 .button_command {
-  background: -webkit-gradient(linear, right bottom, left top, from(#9356dc), color-stop(50%), to(#ff79da));
-  background: linear-gradient(to top left, #9356dc, 50%, #ff79da);
+  background-color: #ff79da;
   border-radius: 30px;
   border: none;
   -webkit-box-shadow: 0 5px 5px 5px lightgrey;
