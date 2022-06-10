@@ -7,6 +7,25 @@ body {
 #block_page {
   width: auto;
 }
+.loading {
+  display: flex;
+  justify-content: center;
+}
+.loading::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: to top, linear-gradient(#9356dc, #ff79da);
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: loading 250ms ease infinite alternate;
+}
+@keyframes loading {
+  to {
+    opacity: 1;
+    transform: rotate(1turn);
+  }
+}
 .primary-color {
   color: #9356dc;
 }
@@ -21,19 +40,23 @@ $clr-btn2: #9356dc;
 $border-rad: 30px;
 $box-shadow: 0 5px 5px 0 lightgray;
 .button {
-  background-color: $clr-btn;
+  background: linear-gradient(
+    top,
+    lighten($clr-btn2, 20) 0%,
+    darken($clr-btn, 5) 100%
+  );
   border-radius: $border-rad;
   border: none;
   color: white;
   font-size: 15px;
   width: 120%;
-  height: 40px;
+  height: 45px;
   margin-top: 5%;
   position: relative;
   z-index: 1;
   &:hover {
     &::after {
-      opacity: 1;
+      opacity: 0;
     }
   }
   &::after {
@@ -45,10 +68,10 @@ $box-shadow: 0 5px 5px 0 lightgray;
     left: 0;
     background: linear-gradient(
       top,
-      lighten($clr-btn, 5) 0%,
-      darken($clr-btn2, 3) 100%
+      darken($clr-btn2, 5) 100%,
+      lighten($clr-btn, 5) 0%
     );
-    opacity: 0;
+    opacity: 1;
     z-index: -1;
     transition: opacity 250ms;
     border-radius: $border-rad;
@@ -92,6 +115,10 @@ $box-shadow: 0 5px 5px 0 lightgray;
   font-weight: normal;
   margin: 2% 2% 0 0;
 }
+.href_footer_style {
+  text-decoration: none;
+  color: white;
+}
 /*Page Accueil*/
 /*Nav*/
 .container_nav {
@@ -116,7 +143,7 @@ $box-shadow: 0 5px 5px 0 lightgray;
   width: 100%;
   background-color: #e8e8e8;
   height: 60px;
-  padding-left: 50px;
+  padding-left: 17%;
 }
 .location_dot_form {
   margin: 3px 0 10px 25px;
@@ -142,15 +169,21 @@ $box-shadow: 0 5px 5px 0 lightgray;
   align-items: center;
   padding: left 10% right 10%;
 }
-.text_form {
-  margin: 15px 0 15px 20px;
+.text_form1 {
+  margin: 10px 30px 10px 30px;
+  padding: 10px 40px 0 30px;
+  text-align: center;
+}
+.text_form2 {
+  margin: 10px 20px 10px 20px;
+  padding: 10px 30px 0 30px;
   text-align: center;
 }
 /*Section Fonctionnement*/
 .section3_form {
   height: 400px;
-  margin-left: 20px;
-  margin-right: 0;
+  margin-left: 25px;
+  margin-right: 10px;
 }
 .h1style_section3 {
   margin: 30px 0 5px 25px;
@@ -158,18 +191,17 @@ $box-shadow: 0 5px 5px 0 lightgray;
 .block_choice {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 95%;
   height: 80px;
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin: 20px 0 25px 0;
   background-color: #f2f2f2;
   box-shadow: 0 5px 5px 5px #d6d6d6;
   border-radius: 20px;
   font-weight: bold;
   cursor: pointer;
-}
-.block_choice:hover {
-  background-color: #efe2fa;
+  &:hover {
+    background-color: #efe2fa;
+  }
 }
 .container_number {
   display: flex;
@@ -185,6 +217,7 @@ $box-shadow: 0 5px 5px 0 lightgray;
   justify-content: center;
   height: 50px;
   width: 50px;
+  font-size: 20px;
 }
 .icon_style:hover {
   color: #9356dc;
@@ -248,13 +281,17 @@ $box-shadow: 0 5px 5px 0 lightgray;
   background-color: #99e2d0;
   justify-content: center;
   align-items: center;
-  top: 15px;
+  top: 25px;
   right: 15px;
   width: 100px;
   height: 30px;
   color: #4b6a62;
   z-index: 2;
   font-weight: bold;
+}
+.href_style {
+  text-decoration: none;
+  color: black;
 }
 .figcaption_form {
   display: flex;
@@ -270,12 +307,47 @@ $box-shadow: 0 5px 5px 0 lightgray;
   font-weight: lighter;
   margin-left: 10px;
 }
-.fa-heart_style {
-  color: none;
+.div_fa-heart_style {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  background: contain, no-repeat;
 }
-.fa-heart_style:hover {
-  color: #9356dc;
-  cursor: pointer;
+.fa-heart_style {
+  display: inline-block;
+  color: none;
+  font-size: 26px;
+  z-index: 1;
+  position: relative;
+}
+.fa-heart_style::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+  transition: transform 600ms;
+}
+.fa-heart_style::after {
+  background-image: linear-gradient(#9356dc, #ff79da);
+  transform: scaleY(0);
+  z-index: -1;
+}
+.fa-heart_style::before {
+  transform-origin: top;
+  background: white;
+}
+.fa-heart_style:hover::before {
+  transform: scaleY(0);
+}
+.fa-heart_style:hover::after {
+  transform: scaleY(1);
 }
 /*Page Menu Restaurant*/
 #block_page {
@@ -288,6 +360,8 @@ $box-shadow: 0 5px 5px 0 lightgray;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  height: 60px;
+  width: 100%;
 }
 .logo_style {
   width: 50%;
@@ -315,19 +389,22 @@ $box-shadow: 0 5px 5px 0 lightgray;
 }
 .menu_section {
   height: 300px;
+  padding: 5px;
+  margin: 10px;
 }
 .h1_form {
-  margin: 0;
+  margin: 5px;
 }
 .block_menu {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 70px;
+  height: 75px;
   box-shadow: 0 5px 5px 5px lightgray;
   border-radius: 20px;
   background-color: white;
   cursor: pointer;
+  margin: 10px 10px 20px 5px;
 }
 .h2_style {
   font-family: roboto;
@@ -361,14 +438,43 @@ $box-shadow: 0 5px 5px 0 lightgray;
   align-items: center;
 }
 .button_command {
-  background-color: #ff79da;
-  border-radius: 30px;
+  background: linear-gradient(
+    top,
+    lighten($clr-btn2, 20) 0%,
+    darken($clr-btn, 5) 100%
+  );
+  border-radius: $border-rad;
   border: none;
-  box-shadow: 0 5px 5px 5px lightgrey;
   color: white;
-  width: 40%;
-  height: 40px;
   font-size: 15px;
+  width: 20%;
+  height: 45px;
+  margin-top: 5%;
+  position: relative;
+  z-index: 1;
+  &:hover {
+    &::after {
+      opacity: 0;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      top,
+      darken($clr-btn2, 5) 100%,
+      lighten($clr-btn, 5) 0%
+    );
+    opacity: 1;
+    z-index: -1;
+    transition: opacity 250ms;
+    border-radius: $border-rad;
+    box-shadow: $box-shadow;
+  }
 }
 .button_form {
   display: flex;
