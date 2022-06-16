@@ -166,8 +166,6 @@ $box-shadow: 0 10px 10px 0 grey;
   color: grey;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 50px;
   font-size: 20px;
   &:hover {
     color: #9356dc;
@@ -271,47 +269,46 @@ figure {
   font-weight: lighter;
   margin-left: 10px;
 }
-.div_fa-heart_style {
+.heart_like {
   display: flex;
   height: 50px;
   width: 50px;
-  border: 1px solid white;
+  position: relative;
+  border: 1px solid #fff;
   justify-content: center;
   align-items: center;
   background-color: white;
-  background: contain, no-repeat;
-}
-.fa-heart_style {
-  display: inline-block;
-  color: none;
-  font-size: 26px;
   z-index: 1;
-  position: relative;
+  font-size: 26px;
+  overflow: hidden;
 }
-.fa-heart_style::after {
+.heart_like::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  top: 50px;
   left: 0;
-  transform-origin: bottom;
-  transition: transform 600ms;
-}
-.fa-heart_style::after {
-  background-image: linear-gradient(#9356dc, #ff79da);
-  transform: scaleY(0);
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
-.fa-heart_style::before {
-  transform-origin: top;
-  background: white;
+.heart_like:hover::after {
+  top: 0;
+  animation: heartfull 0.5s;
+  background: linear-gradient(to top, #9356dc, #ff79da);
 }
-.fa-heart_style:hover::before {
-  transform: scaleY(0);
+@keyframes heartfull {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
-.fa-heart_style:hover::after {
-  transform: scaleY(1);
+.href_heart_like {
+  text-decoration: none;
+  color: #000;
 }
 /*Page Menu Restaurant*/
 #block_page {
