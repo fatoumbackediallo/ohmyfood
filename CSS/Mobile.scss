@@ -675,4 +675,27 @@ figure {
   .footer_form {
     padding: 2% 4% 4% 4%;
   }
+  .footer_itemform {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+  }
+  .h3_itemform1 {
+    padding-left: 1.5%;
+    font-size: 18px;
+    margin-left: 1%;
+    font-weight: normal;
+  }
+  .h3_itemform2 {
+    padding-left: 1%;
+    font-size: 18px;
+    margin-left: 1%;
+    font-weight: normal;
+  }
+  .h4_form {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 1% 1% 0 0;
+  }
 }
