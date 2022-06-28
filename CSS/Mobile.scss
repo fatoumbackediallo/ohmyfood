@@ -338,7 +338,7 @@ figure {
   }
   &:hover::after {
     opacity: 1;
-    transform: translate(-50%), scale(1.1);
+    transform: translateY(-50%), scale(1.1);
   }
 }
 .h3_font_size {
@@ -419,7 +419,7 @@ figure {
   }
   &:hover::after {
     opacity: 1;
-    transform: translate(-50%), scale(1.1);
+    transform: translateY(-50%), scale(1.1);
   }
 }
 .h1_main_form {
@@ -531,7 +531,6 @@ figure {
   align-items: center;
   justify-content: center;
   background: white;
-  aspect-ratio: 1;
   width: 2rem;
   border-radius: 1rem;
   color: #99e2d0;
